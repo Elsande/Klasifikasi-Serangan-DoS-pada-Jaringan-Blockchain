@@ -1,0 +1,53 @@
+Memuat    70000 baris dari w1.csv
+Memuat    70000 baris dari w2.csv
+Memuat    70000 baris dari w3.csv
+
+Ukuran dataset gabungan: 210,000 baris x 22 kolom
+
+Distribusi label awal:
+  - Normal              :    150,000 baris (71.43%)
+  - MitM                :     15,000 baris ( 7.14%)
+  - BP                  :     15,000 baris ( 7.14%)
+  - DoS                 :     15,000 baris ( 7.14%)
+  - FoT                 :     15,000 baris ( 7.14%)
+
+Menyaring label untuk mempertahankan hanya Normal & DoS (menghapus 45,000 baris).
+Distribusi label setelah penyaringan:
+  - Normal              :    150,000 baris (90.91%)
+  - DoS                 :     15,000 baris ( 9.09%)
+
+
+Jumlah baris duplikat yang dihapus: 71330
+Bentuk setelah deduplikasi: (93670, 22)
+Distribusi label setelah dedup:
+label
+Normal    78919
+DoS       14751
+Name: count, dtype: int64
+
+
+Fitur kategorikal (3 kolom): ['protocol_type', 'service', 'flag']
+Fitur numerik (18 kolom): ['duration', 'src_bytes', 'dst_bytes', 'count', 'srv_count', 'serror_rate', 'same_srv_rate', 'diff_srv_rate', 'srv_serror_rate', 'srv_diff_host_rate', 'dst_host_count', 'dst_host_srv_count', 'dst_host_same_srv_rate', 'dst_host_diff_srv_rate', 'dst_host_same_src_port_rate', 'dst_host_serror_rate', 'dst_host_srv_diff_host_rate', 'dst_host_srv_serror_rate']
+Distribusi kategori awal:
+- protocol_type: {'tcp': 93644, 'udp': 24, 'icmp': 2}
+- service: {'other': 50271, 'http': 42293, 'private': 1102, 'netbios_ssn': 2, 'oth_i': 2}
+- flag: {'OTH': 71295, 'S1': 15304, 'SF': 6991, 'S3': 80}
+
+Train size: (74936, 21), Test size: (18734, 21)
+Distribusi label pada train: {0: 63135, 1: 11801}
+Distribusi label pada test: {0: 15784, 1: 2950}
+
+Shape X_train setelah preprocessing: (74936, 21)
+Shape X_test setelah preprocessing: (18734, 21)
+Jumlah fitur setelah encoding: 21
+Preview fitur hasil preprocessing (5 baris pertama):
+ duration  src_bytes  dst_bytes     count  srv_count  serror_rate  same_srv_rate  diff_srv_rate  srv_serror_rate  srv_diff_host_rate  dst_host_count  dst_host_srv_count  dst_host_same_srv_rate  dst_host_diff_srv_rate  dst_host_same_src_port_rate  dst_host_serror_rate  dst_host_srv_diff_host_rate  dst_host_srv_serror_rate  protocol_type  service  flag
+-0.003653  -0.510567  -0.144711 -0.558241  -0.487930    -0.423317       0.529053      -0.527486        -0.419505            0.370523       -0.324005            0.124718                0.507059               -0.501551                    -0.641364             -0.427652                     0.395102                 -0.425834            0.0      0.0   0.0
+-0.003653  -0.534800  -0.144711  0.574601   0.201794     1.878961       0.484615      -0.481643         1.654762           -1.186122        1.864618            0.928008                0.507059               -0.501551                    -0.807809              2.396806                    -1.726667                  2.406774            0.0      1.0   1.0
+-0.003653  -0.510567  -0.144711 -0.507516  -0.423185    -0.423317       0.529053      -0.527486        -0.419505            0.512036       -0.011345            0.813253                0.507059               -0.501551                     1.799818             -0.427652                     0.525006                 -0.425834            0.0      0.0   0.0
+-0.003653   1.642113   1.342500  0.096344   0.117230    -0.423317       0.395738      -0.389956        -0.419505            0.087496        0.405536            0.813253                0.379319               -0.365421                    -0.807809             -0.427652                     0.091992                 -0.425834            0.0      1.0   2.0
+-0.003653  -0.510567  -0.144711 -0.439884  -0.411294    -0.423317       0.440176      -0.435800        -0.419505           -0.289872        0.613976            0.899319                0.421899               -0.410797                    -0.807809             -0.427652                    -0.167817                 -0.425834            0.0      0.0   0.0
+Mapping kategori -> angka:
+- protocol_type: {'tcp': 0, 'udp': 1, 'icmp': 2}
+- service: {'other': 0, 'http': 1, 'private': 2, 'netbios_ssn': 3, 'oth_i': 4}
+- flag: {'OTH': 0, 'S1': 1, 'SF': 2, 'S3': 3}

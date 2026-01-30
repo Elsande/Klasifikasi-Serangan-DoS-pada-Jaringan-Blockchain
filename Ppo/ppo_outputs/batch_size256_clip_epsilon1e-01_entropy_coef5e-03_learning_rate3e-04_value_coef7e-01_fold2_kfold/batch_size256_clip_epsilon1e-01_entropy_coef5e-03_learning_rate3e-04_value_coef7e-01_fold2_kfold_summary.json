@@ -1,0 +1,102 @@
+{
+  "fold_metrics": [
+    {
+      "accuracy": 0.9982918757339596,
+      "f1": 0.9945661402615045,
+      "roc_auc": 0.9999040113567053,
+      "average_precision": 0.9993342772207041,
+      "classification_report": {
+        "Normal": {
+          "precision": 0.9986388097499208,
+          "recall": 0.9993347693867207,
+          "f1-score": 0.9989866683555527,
+          "support": 31568.0
+        },
+        "DoS": {
+          "precision": 0.9964273562436203,
+          "recall": 0.9927118644067796,
+          "f1-score": 0.9945661402615045,
+          "support": 5900.0
+        },
+        "accuracy": 0.9982918757339596,
+        "macro avg": {
+          "precision": 0.9975330829967706,
+          "recall": 0.9960233168967502,
+          "f1-score": 0.9967764043085285,
+          "support": 37468.0
+        },
+        "weighted avg": {
+          "precision": 0.9982905772398541,
+          "recall": 0.9982918757339596,
+          "f1-score": 0.9982905779382663,
+          "support": 37468.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          31547,
+          21
+        ],
+        [
+          43,
+          5857
+        ]
+      ],
+      "confusion_path": "D:\\Ppo\\Ppo\\ppo_outputs\\batch_size256_clip_epsilon1e-01_entropy_coef5e-03_learning_rate3e-04_value_coef7e-01_fold2_kfold\\fold_1_confusion_matrix.png",
+      "roc_path": "D:\\Ppo\\Ppo\\ppo_outputs\\batch_size256_clip_epsilon1e-01_entropy_coef5e-03_learning_rate3e-04_value_coef7e-01_fold2_kfold\\fold_1_roc.png",
+      "pr_path": "D:\\Ppo\\Ppo\\ppo_outputs\\batch_size256_clip_epsilon1e-01_entropy_coef5e-03_learning_rate3e-04_value_coef7e-01_fold2_kfold\\fold_1_pr.png"
+    },
+    {
+      "accuracy": 0.9988256645670972,
+      "f1": 0.9962680237489397,
+      "roc_auc": 0.9998467066766803,
+      "average_precision": 0.9982127316424813,
+      "classification_report": {
+        "Normal": {
+          "precision": 0.9991133348111086,
+          "recall": 0.9994931415718947,
+          "f1-score": 0.9993032021030628,
+          "support": 31567.0
+        },
+        "DoS": {
+          "precision": 0.9972830701307522,
+          "recall": 0.9952550415183867,
+          "f1-score": 0.9962680237489397,
+          "support": 5901.0
+        },
+        "accuracy": 0.9988256645670972,
+        "macro avg": {
+          "precision": 0.9981982024709304,
+          "recall": 0.9973740915451408,
+          "f1-score": 0.9977856129260012,
+          "support": 37468.0
+        },
+        "weighted avg": {
+          "precision": 0.9988250783821884,
+          "recall": 0.9988256645670972,
+          "f1-score": 0.9988251785238036,
+          "support": 37468.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          31551,
+          16
+        ],
+        [
+          28,
+          5873
+        ]
+      ],
+      "confusion_path": "D:\\Ppo\\Ppo\\ppo_outputs\\batch_size256_clip_epsilon1e-01_entropy_coef5e-03_learning_rate3e-04_value_coef7e-01_fold2_kfold\\fold_2_confusion_matrix.png",
+      "roc_path": "D:\\Ppo\\Ppo\\ppo_outputs\\batch_size256_clip_epsilon1e-01_entropy_coef5e-03_learning_rate3e-04_value_coef7e-01_fold2_kfold\\fold_2_roc.png",
+      "pr_path": "D:\\Ppo\\Ppo\\ppo_outputs\\batch_size256_clip_epsilon1e-01_entropy_coef5e-03_learning_rate3e-04_value_coef7e-01_fold2_kfold\\fold_2_pr.png"
+    }
+  ],
+  "mean_metrics": {
+    "accuracy": 0.9985587701505284,
+    "f1": 0.9954170820052222,
+    "roc_auc": 0.9998753590166928,
+    "average_precision": 0.9987735044315926
+  }
+}

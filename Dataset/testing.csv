@@ -1,0 +1,6 @@
+duration,protocol_type,service,src_bytes,dst_bytes,flag,count,srv_count,serror_rate,same_srv_rate,diff_srv_rate,srv_serror_rate,srv_diff_host_rate,dst_host_count,dst_host_srv_count,dst_host_same_srv_rate,dst_host_diff_srv_rate,dst_host_same_src_port_rate,dst_host_serror_rate,dst_host_srv_diff_host_rate,dst_host_srv_serror_rate,label
+0,tcp,http,297,0,OTH,27,65,0.0,1.0,0.0,0.0,0.58,27,65,1.0,0.0,0.44,0.0,0.58,0.0,Normal
+0,tcp,http,60,0,S1,969,1051,0.84,0.99,0.01,0.77,0.08,100,100,1.0,0.0,0.0,1.0,0.0,1.0,DoS
+0,tcp,http,790,614,SF,5,10,0.0,1.0,0.0,0.0,0.5,5,10,1.0,0.0,0.0,0.0,0.5,0.0,Normal
+0,tcp,other,66,0,OTH,10,20,0.0,1.0,0.0,0.0,0.5,10,20,1.0,0.0,0.14,0.0,0.5,0.0,Normal
+0,tcp,http,60,0,S1,856,872,0.94,0.99,0.01,0.93,0.03,100,100,1.0,0.0,0.0,1.0,0.0,1.0,DoS
